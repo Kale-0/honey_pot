@@ -1,0 +1,36 @@
+Honeypot Attack Report
+Date: July 13, 2025
+
+Summary:
+Our honeypot system detected and logged several suspicious HTTP requests from various IP addresses. These requests indicate potential probing behavior typical of automated bots or malicious users.
+
+Detailed Log Entries:
+1. Request 1:
+    - IP Address: 192.168.0.2
+    - Timestamp: 14:21:05
+    - Request: GET /admin HTTP/1.1
+    - Response: 404 Not Found
+2. Request 2:
+    - IP Address: 203.0.113.55
+    - Timestamp: 14:21:45
+    - Request: POST /login HTTP/1.1
+    - Response: 200 OK
+3. Request 3:
+    - IP Address: 198.51.100.88
+    - Timestamp: 14:22:33
+    - Request: GET /config HTTP/1.1
+    - Response: 403 Forbidden
+4. Request 4:
+    - IP Address: 192.0.2.44
+    - Timestamp: 14:23:12
+    - Request: GET /wp-login.php HTTP/1.1
+    - Response: 404 Not Found
+5. Request 5:
+    - IP Address: 198.51.100.13
+    - Timestamp: 14:24:17
+    - Request: GET /setup.php HTTP/1.1
+    - Response: 404 Not Found
+
+Analysis:
+The requests logged by our honeypot system suggest that the IP addresses involved may be attempting to probe our system for vulnerabilities. The requests for /admin, /wp-login.php, and /setup.php are particularly suspicious, as these endpoints are commonly targeted by attackers.
+
